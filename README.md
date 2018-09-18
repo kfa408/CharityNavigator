@@ -6,8 +6,8 @@ Simply do:
 
 ```javascript
 const CharityNavigator = require('(your path)/CharityNavigator/index.js');
-appid = (your app id);
-appkey = (your app key);
+const appid = (your app id);
+const appkey = (your app key);
 const charitynavigator = new CharityNavigator(appid, appkey);
 ```
 
