@@ -1,5 +1,7 @@
 # Wrapper for Charity Navigator for Node.js
 
+Dependancies: npm request package.
+
 Simply do:
 
 ```javascript
@@ -15,7 +17,7 @@ charitynavigator.Organizations()
 charitynavigator.Organizationsein()
 ```
 
-##### Organizationsein() method:
+#### Organizationsein() method:
 
 Parameters takes in a single string of numbers (indicating the ein of the charity).
 
@@ -34,7 +36,7 @@ This logs the information about the charity with ein 010202467.
 The ein is the only parameter for this method.
 
 
-##### Organizations() method:
+#### Organizations() method:
 
 Parameters takes in a js object.
 
