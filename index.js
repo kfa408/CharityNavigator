@@ -16,7 +16,6 @@ module.exports = class {
             const met = endpoints.methods[method];
 
             Object.keys(met).forEach(m => {
-                // console.log(m);
                 this[method + m] = async (params = {}) => {
                     // if (!this.token || Date.now() > +new Date(this.token.expires_at)) {
                     //     await this.requestToken();
@@ -27,7 +26,6 @@ module.exports = class {
             })
         })
 
-        // console.log(this);
     }
 
     makeRequest (type, params, endpoint) {
@@ -37,7 +35,6 @@ module.exports = class {
             const index = parts[1].indexOf('/')
             endpoint = parts[0] + params + (index === -1 ? '' : parts[1].substr(index))
         }
-        // console.log('params is',params);
         endpoint = endpoint + '?app_id='+this.appid;
         endpoint = endpoint + '&app_key='+this.appkey;
         if (typeof params == 'object'){
@@ -45,15 +42,10 @@ module.exports = class {
                 endpoint = endpoint + '&' + pkey + '=' + params[pkey];
             });
         }
-        // console.log(type, params, endpoint);
         var url = this.baseUrl + endpoint;
-        console.log(url);
         return new Promise((resolve, reject) => {
             request({url: url, json: true}, (error, response, body) => {
-                // console.log('error is', error);
-                // console.log('response is', response);
                 if (!error && response.statusCode === 200) {
-                    // console.log(body);
                     resolve(body);
                 }
                 else{
@@ -61,6 +53,5 @@ module.exports = class {
                 }
             })
         })
-        // let req = request(this.baseUrl + endpoint);
     }
 }
