@@ -17,7 +17,7 @@ charitynavigator.Organizations()
 charitynavigator.Organizationsein()
 ```
 
-#### Organizationsein() method:
+### Organizationsein() method:
 
 Parameters takes in a single string of numbers (indicating the ein of the charity).
 
@@ -36,7 +36,7 @@ This logs the information about the charity with ein 010202467.
 The ein is the only parameter for this method.
 
 
-#### Organizations() method:
+### Organizations() method:
 
 Parameters takes in a js object.
 
@@ -51,7 +51,7 @@ charitynavigator.Organizations({ minRating: 4, rated: true, pageSize: 20}).then(
 })
 ```
 
-This returns 20 charities that is rated, with minimum rating 4/5.
+This logs 20 charities that is rated, with minimum rating 4.
 
 Parameters list:
 - pageSize: int from 1 to 1000. Default 100
