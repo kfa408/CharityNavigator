@@ -2,19 +2,28 @@
 
 Dependancies: npm request package.
 
-Simply do:
+This is a Node.js wrapper for the api for Charity Navigator that can be found [here](https://charity.3scale.net/docs/data-api/reference)
+
+From git:
+
+Using npm:
+```bash
+npm install charitynavigator
+```
+
+In Node.js:
 
 ```javascript
-const CharityNavigator = require('(your path)/CharityNavigator/index.js');
+const CharityNavigator = require('charitynavigator');
 const appid = (your app id);
 const appkey = (your app key);
-const charitynavigator = new CharityNavigator(appid, appkey);
+const charityNavigator = new CharityNavigator(appid, appkey);
 ```
 
 Currently supported method:
 ```javascript
-charitynavigator.orgs()
-charitynavigator.orgsEin()
+charityNavigator.orgs()
+charityNavigator.orgsEin()
 ```
 
 ### orgsEin() method:
@@ -25,7 +34,7 @@ Returns a promise which, when resolved, gives a json with the information about 
 
 For example:
 ```javascript
-charitynavigator.orgsEin('010202467').then((body) =>{
+charityNavigator.orgsEin('010202467').then((body) =>{
     console.log(body);
 }).catch((error)=>{
     console.log(error);
@@ -44,7 +53,7 @@ Returns a promise which, when resolved, gives a list of charities from charity n
 
 For example:
 ```javascript
-charitynavigator.orgs({ minRating: 4, rated: true, pageSize: 20}).then((body)=>{
+charityNavigator.orgs({ minRating: 4, rated: true, pageSize: 20}).then((body)=>{
     console.log(body);
 }).catch((error) => {
     console.log(error);
