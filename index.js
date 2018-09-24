@@ -17,10 +17,6 @@ module.exports = class {
 
             Object.keys(met).forEach(m => {
                 this[method + m] = async (params = {}) => {
-                    // if (!this.token || Date.now() > +new Date(this.token.expires_at)) {
-                    //     await this.requestToken();
-                    // }
-
                     return this.makeRequest(met[m].method, params, met[m].resource);
                 }
             })
