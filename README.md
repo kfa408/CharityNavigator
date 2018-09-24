@@ -8,7 +8,7 @@ From git:
 
 Using npm:
 ```bash
-npm install charitynavigator-Promise
+npm install charitynavigator-promise
 ```
 
 In Node.js:
