@@ -13,11 +13,11 @@ const charitynavigator = new CharityNavigator(appid, appkey);
 
 Currently supported method:
 ```javascript
-charitynavigator.Organizations()
-charitynavigator.Organizationsein()
+charitynavigator.orgs()
+charitynavigator.orgsEin()
 ```
 
-### Organizationsein() method:
+### orgsEin() method:
 
 Parameters takes in a single string of numbers (indicating the ein of the charity).
 
@@ -25,7 +25,7 @@ Returns a promise which, when resolved, gives a json with the information about 
 
 For example:
 ```javascript
-charitynavigator.Organizationsein('010202467').then((body) =>{
+charitynavigator.orgsEin('010202467').then((body) =>{
     console.log(body);
 }).catch((error)=>{
     console.log(error);
@@ -36,7 +36,7 @@ This logs the information about the charity with ein 010202467.
 The ein is the only parameter for this method.
 
 
-### Organizations() method:
+### orgs() method:
 
 Parameters takes in a js object.
 
@@ -44,7 +44,7 @@ Returns a promise which, when resolved, gives a list of charities from charity n
 
 For example:
 ```javascript
-charitynavigator.Organizations({ minRating: 4, rated: true, pageSize: 20}).then((body)=>{
+charitynavigator.orgs({ minRating: 4, rated: true, pageSize: 20}).then((body)=>{
     console.log(body);
 }).catch((error) => {
     console.log(error);
