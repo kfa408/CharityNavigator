@@ -14,7 +14,7 @@ npm install charitynavigator-Promise
 In Node.js:
 
 ```javascript
-const CharityNavigator = require('charitynavigator-Promise');
+const CharityNavigator = require('charitynavigator-promise');
 const appid = (your app id);
 const appkey = (your app key);
 const charityNavigator = new CharityNavigator(appid, appkey);

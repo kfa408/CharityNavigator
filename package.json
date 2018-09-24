@@ -1,5 +1,5 @@
 {
-  "name": "charitynavigator-Promise",
+  "name": "charitynavigator-promise",
   "version": "1.0.0",
   "description": "A Node.js wrapper for Charity Navigator API",
   "main": "index.js",
