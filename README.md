@@ -8,13 +8,13 @@ From git:
 
 Using npm:
 ```bash
-npm install charitynavigator
+npm install charitynavigator-Promise
 ```
 
 In Node.js:
 
 ```javascript
-const CharityNavigator = require('charitynavigator');
+const CharityNavigator = require('charitynavigator-Promise');
 const appid = (your app id);
 const appkey = (your app key);
 const charityNavigator = new CharityNavigator(appid, appkey);
