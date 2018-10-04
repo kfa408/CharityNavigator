@@ -30,7 +30,7 @@ charityNavigator.orgsEin()
 
 Parameters takes in a single string of numbers (indicating the ein of the charity).
 
-Returns a promise which, when resolved, gives a json with the information about the charity with the specified ein.
+Returns a promise which, when resolved, gives the information about the charity with the specified ein.
 
 For example:
 ```javascript
@@ -65,6 +65,7 @@ This logs 20 charities that is rated, with minimum rating 4.
 Parameters list:
 - pageSize: int from 1 to 1000. Default 100
 - rated: 'TRUE','FALSE',0, or 1
+- search: a simple search string to narrow the result.
 - categoryID
 - causeID
 - fundraisingOrgs: 'TRUE','FALSE',0, or 1. Shows whether they are fundraising org or not.
